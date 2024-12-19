@@ -5,9 +5,7 @@ ADD https://downloads.sourceforge.net/project/davmail/davmail/6.2.2/davmail-6.2.
 RUN adduser davmail -D && \
   mkdir /usr/local/davmail && \
   unzip -q /tmp/davmail.zip -d /usr/local/davmail && \
-  rm /tmp/davmail.zip && \
-  mkdir /var/log/davmail && \
-  chown davmail:davmail /var/log/davmail -R 
+  rm /tmp/davmail.zip 
 
 VOLUME        /etc/davmail
 
