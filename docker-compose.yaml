@@ -1,0 +1,9 @@
+services:
+  davmail:
+    build:
+      .
+    container_name: davmail
+    volumes:
+      - ./davmail.properties:/etc/davmail/davmail.properties
+    restart: unless-stopped
+    network_mode: host
